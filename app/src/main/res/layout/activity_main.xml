@@ -1,101 +1,159 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    android:layout_centerHorizontal="true"
 
-    <EditText
-        android:id="@+id/edLiablities"
-        android:layout_width="334dp"
-        android:layout_height="42dp"
-        android:ems="10"
-        android:hint="Enter Total Liabilities"
-
-        tools:layout_editor_absoluteX="41dp"
-        tools:layout_editor_absoluteY="277dp"
-        tools:ignore="MissingConstraints" />
-
-    <EditText
-        android:id="@+id/edCash"
-        android:layout_width="334dp"
-        android:layout_height="42dp"
-        android:ems="10"
-        android:hint="Enter Total Cash In Hand"
-
-        tools:layout_editor_absoluteX="41dp"
-        tools:layout_editor_absoluteY="167dp"
-        tools:ignore="MissingConstraints" />
-
-    <EditText
-        android:id="@+id/edBank"
-        android:layout_width="334dp"
-        android:layout_height="42dp"
-        android:ems="10"
-        android:hint="Enter Total Cash in Bank"
-
-        tools:layout_editor_absoluteX="41dp"
-        tools:layout_editor_absoluteY="223dp"
-        tools:ignore="MissingConstraints" />
+    android:background="#93EC96"
+    android:backgroundTint="@color/material_dynamic_primary20"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:padding="20dp"
+    tools:context=".MainActivity"
+    tools:ignore="NamespaceTypo">
 
     <EditText
         android:id="@+id/EdGoldValue"
         android:layout_width="334dp"
         android:layout_height="42dp"
+        android:background="#DCECCA"
         android:ems="10"
-        android:hint="Enter Total Gold Value"
 
+        android:hint="Enter Total Gold Value"
+        android:textAlignment="center"
+        android:textColor="#100F0F"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="41dp"
-        tools:layout_editor_absoluteY="38dp"
-        tools:ignore="MissingConstraints" />
+        tools:layout_editor_absoluteY="38dp" />
 
     <EditText
         android:id="@+id/edSilverValue"
         android:layout_width="334dp"
         android:layout_height="42dp"
+        android:background="#EFE8D5"
         android:ems="10"
+
         android:hint="Enter Total Silver Value"
-
+        android:textAlignment="center"
+        android:textColor="#100F0F"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="41dp"
-        tools:layout_editor_absoluteY="106dp"
-        tools:ignore="MissingConstraints" />
+        tools:layout_editor_absoluteY="106dp" />
 
-    <Button
-        android:id="@+id/btnCalculate"
-        android:layout_width="146dp"
+
+    <EditText
+        android:id="@+id/edCash"
+        android:layout_width="334dp"
         android:layout_height="42dp"
-        android:text="Calculate"
+        android:background="#EDE1E5"
+        android:ems="10"
+
+        android:hint="Enter Total Cash In Hand"
+        android:textAlignment="center"
+        android:textColor="#100F0F"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="41dp"
-        tools:layout_editor_absoluteY="341dp"
-        tools:ignore="MissingConstraints" />
+        tools:layout_editor_absoluteY="167dp" />
 
-    <Button
-        android:id="@+id/btnClear"
-        android:layout_width="161dp"
-        android:layout_height="39dp"
-        android:text="Clear"
-        tools:layout_editor_absoluteX="206dp"
-        tools:layout_editor_absoluteY="340dp"
-        tools:ignore="MissingConstraints" />
+    <EditText
+        android:id="@+id/edBank"
+        android:layout_width="334dp"
+        android:layout_height="42dp"
+        android:background="#F3D8F8"
+        android:ems="10"
 
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline"
-        android:layout_width="wrap_content"
+        android:hint="Enter Total Cash in Bank"
+        android:textAlignment="center"
+        android:textColor="#100F0F"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="41dp"
+        tools:layout_editor_absoluteY="223dp" />
+
+
+    <EditText
+        android:id="@+id/edLiablities"
+        android:layout_width="334dp"
+        android:layout_height="42dp"
+        android:background="?attr/colorErrorContainer"
+        android:backgroundTint="#C2FBC5"
+
+        android:ems="10"
+        android:hint="Enter Total Liabilities"
+        android:textAlignment="center"
+        android:textColor="#100F0F"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="41dp"
+        tools:layout_editor_absoluteY="277dp" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_begin="20dp" />
+        android:layout_gravity="center"
+        android:baselineAligned="true"
+        android:orientation="horizontal"
+        android:paddingLeft="20dp"
+        android:paddingTop="20dp"
+        android:paddingBottom="20dp">
+
+
+        <Button
+            android:id="@+id/btnCalculate"
+            android:layout_width="161dp"
+            android:layout_height="42dp"
+            android:backgroundTint="#4CAF50"
+            android:fontFamily="sans-serif-medium"
+            android:text="Calculate"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="41dp"
+            tools:layout_editor_absoluteY="341dp" />
+
+        <Button
+            android:id="@+id/btnClear"
+            android:layout_width="161dp"
+            android:layout_height="42dp"
+            android:backgroundTint="#4CAF50"
+            android:fontFamily="sans-serif-medium"
+            android:text="Clear"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="206dp"
+            tools:layout_editor_absoluteY="340dp" />
+    </LinearLayout>
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/tvZakat"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:fontFamily="casual"
-        android:text="TextView"
+        android:fontFamily="sans-serif-medium"
+        android:paddingBottom="20dp"
+        android:text="0.00"
         android:textColor="#E91E63"
         android:textSize="20sp"
+        android:textStyle="bold"
         app:autoSizeTextType="uniform"
         tools:layout_editor_absoluteX="31dp"
         tools:layout_editor_absoluteY="408dp" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <com.google.android.gms.ads.AdView
+        xmlns:ads="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/adView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        ads:adSize="BANNER"
+        ads:adUnitId="cca-app-pub-5257312152338201/3653775290">
+    </com.google.android.gms.ads.AdView>
+</LinearLayout>
